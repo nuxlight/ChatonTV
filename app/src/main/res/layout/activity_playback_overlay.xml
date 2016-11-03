@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <nuxapp.com.chatontv.DMWebVideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dmWebVideoView"
+    />
+
+    <fragment android:id="@+id/playback_controls_fragment"
+        android:name="nuxapp.com.chatontv.PlaybackControlsFragment"
+        android:layout_width="match_parent" android:layout_height="match_parent" />
+
+</FrameLayout>
