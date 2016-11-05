@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hooper_main_color">#441B23</color>
+    <color name="fastlane_background">#75363E</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="default_background">#3d3d3d</color>
+</resources>

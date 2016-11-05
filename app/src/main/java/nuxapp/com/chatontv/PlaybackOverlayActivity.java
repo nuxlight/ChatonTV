@@ -1,6 +1,7 @@
 package nuxapp.com.chatontv;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -20,12 +21,13 @@ public class PlaybackOverlayActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Bundle bundle = getIntent().getExtras();
         setContentView(R.layout.activity_playback_overlay);
 
         mVideoView = ((DMWebVideoView) findViewById(R.id.dmWebVideoView));
         mVideoView.setControls(false);
         mVideoView.setAutoPlay(true);
-        mVideoView.loadUrl("http://www.dailymotion.com/embed/video/k7vUCcIu7nPTaoklJkW&amp;autoPlay=1");
+        mVideoView.loadUrl(bundle.getString("url_play"));
     }
 
     public void playAndPauseMovie(boolean playPause){
@@ -36,5 +38,11 @@ public class PlaybackOverlayActivity extends Activity {
         else {
             mVideoView.play();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        onDestroy();
+        super.onBackPressed();
     }
 }

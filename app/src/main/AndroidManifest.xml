@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Leanback">
         <activity android:name=".PlaybackOverlayActivity">
         </activity>
-        <activity android:name=".chatonDashboard">
+        <activity android:name=".ChatonDashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
